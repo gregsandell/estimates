@@ -1,0 +1,137 @@
+{
+  "error": null,
+  "estimatesStatus": {
+    "estimatesTitle": "Untitled Estimates",
+    "readOnly": false
+  },
+  "main": {
+    "estimatesNumber": "105045",
+    "flagshipStore": "Smith & Barney",
+    "center": "Topeka, KS",
+    "representative": "Dean Jones",
+    "status": {
+      "listName": "Status",
+      "listCode": "ESTIMATES_STATUS_DROPDOWN",
+      "selectedValue": "In Progress",
+      "selected": null,
+      "list": [
+        {
+          "id": null,
+          "description": "In Progress",
+          "value": "In Progress",
+          "key": "In Progress",
+          "group": null,
+          "modal": false
+        },
+        {
+          "id": null,
+          "description": "Out of Date",
+          "value": "Out of Date",
+          "key": "Out of Date",
+          "group": null,
+          "modal": false
+        },
+        {
+          "id": null,
+          "description": "Misplaced",
+          "value": "Misplaced",
+          "key": "Misplaced",
+          "group": null,
+          "modal": false
+        },
+        {
+          "id": null,
+          "description": "On Back Order",
+          "value": "On Back Order",
+          "key": "On Back Order",
+          "group": null,
+          "modal": false
+        },
+        {
+          "id": null,
+          "description": "Out of Stock",
+          "value": "Out of Stock",
+          "key": "Out of Stock",
+          "group": null,
+          "modal": false
+        },
+        {
+          "id": null,
+          "description": "Discontinued",
+          "value": "Discontinued",
+          "key": "Discontinued",
+          "group": null,
+          "modal": false
+        },
+        {
+          "id": null,
+          "description": "Layaway",
+          "value": "Layaway",
+          "key": "Layaway",
+          "group": null,
+          "modal": false
+        },
+        {
+          "id": null,
+          "description": "Unavailable",
+          "value": "Unavailable",
+          "key": "Unavailable",
+          "group": null,
+          "modal": false
+        },
+        {
+          "id": null,
+          "description": "Bought out",
+          "value": "Bought out",
+          "key": "Bought out",
+          "group": null,
+          "modal": false
+        },
+        {
+          "id": null,
+          "description": "Delivered to competitor",
+          "value": "Delivered to competitor",
+          "key": "Delivered to competitor",
+          "group": null,
+          "modal": false
+        },
+        {
+          "id": null,
+          "description": "Delivered",
+          "value": "Delivered",
+          "key": "Delivered",
+          "group": null,
+          "modal": false
+        },
+        {
+          "id": null,
+          "description": "Completed",
+          "value": "Completed",
+          "key": "Completed",
+          "group": null,
+          "modal": false
+        }
+      ]
+    },
+    "estimatesType": {
+      "listName": "Estimates Type",
+      "listCode": "ESTIMATES_TYPE",
+      "selectedValue": "Purchase",
+      "selected": null,
+      "list": [
+        {
+          "id": null,
+          "description": "Purchase",
+          "value": "Purchase",
+          "key": "Purchase",
+          "group": null,
+          "modal": false
+        }
+      ]
+    },
+    "itemCount": 65442,
+    "estimatesAmount": 888222
+  },
+  "endDate": "27-Jul-2015",
+  "userNotes": "This is a note"
+}

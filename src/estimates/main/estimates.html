@@ -1,0 +1,44 @@
+<div ng-switch="estimatesCtrl.loadingState" class="estimates-container">
+    <div ng-switch-when="loading" class="loading-animation"></div>
+    <div ng-switch-when="hasError">
+        <messages-directive config="{id: 'details'}" content-id="estimates.alerts.SERVICE_ERROR"></messages-directive>
+    </div>
+    <div ng-switch-when="loaded">
+        <header class="view-header">
+            <div class="row">
+                <div class="col-md-10">
+                    <div class="estimates-name">{{estimatesCtrl.estimatesData.estimatesStatus.estimatesTitle}}</div>
+                </div>
+                <div class="col-md-2">
+                    <button id="col-md-5 estimatesSave" class="btn-primary btn" ng-disabled="!estimatesCtrl.unsavedChanges" ng-click="estimatesCtrl.saveEstimates();"><translate>estimates.labels.SAVE_UPDATES</translate></button>
+                </div>
+            </div>
+        </header>
+        <div class="row">
+            <div class="col-md-2">
+                <estimates-nav
+                        current-page="'details'"
+                        total-estimates-amount="estimatesCtrl.estimatesData.details.totalEstimatesAmount">
+                </estimates-nav>
+            </div>
+            <div class="col-md-10">
+                <div class="row">
+                    <div class="col-md-10 box-title"><translate>common.labels.ESTIMATES</translate></div>
+                </div>
+                <div class="row">
+                    <div class="md-10">
+                        <estimates-view
+                                unsaved-changes="estimatesCtrl.unsavedChanges"
+                                completed="estimatesCtrl.completed"
+                                disable="estimatesCtrl.disable"
+                                save-estimates-detail="estimatesCtrl.saveEstimates"
+                                enable-save="estimatesCtrl.enableSave"
+                                estimates-data="estimatesCtrl.estimatesData">
+                        </estimates-view>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,23 @@
+{
+  "estimates": {
+    "labels": {
+      "ESTIMATES_STATUS": "ES: Status",
+      "ESTIMATES_COMPLETED": "ES: Completed",
+      "ESTIMATES_ID": "ES: Estimates ID",
+      "ESTIMATES_TYPE": "ES: Type",
+      "CREATION DATE": "ES: Created on",
+      "CENTER": "ES: Center",
+      "REPRESENTATIVE": "ES: Representative",
+      "USER_NOTES": "ES: Notes",
+      "EXPIRATION_DATE": "ES: Expires On",
+      "ESTIMATES_STATUS": "ES: Status",
+      "ESTIMATES_COMPLETED":  "ES: Completed On",
+      "SAVE_UPDATES": "ES: Save Updates"
+    },
+    "messages": {
+      "ESTIMATES_READ_ERROR":  "ES: Your estimates could not be retrieved.",
+      "ESTIMATES_WRITE_ERROR":  "ES: Your estimates could not be saved.",
+      "ESTIMATES_SUCCESS":  "ES: Your estimates were saved."
+    }
+  }
+}

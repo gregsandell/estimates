@@ -1,0 +1,101 @@
+<div id="estimatesPage">
+    <div class="row">
+        <div class="col-md-6 text-left">
+            <div class="padding-double panel">
+                <div class="row estimates-top-fields">
+                    <div class="col-md-4">
+                        <div class="estimates-gray-label"><translate>estimates.labels.ESTIMATES_ID</translate></div>
+                        <div class="estimates-number estimates-value">{{estimatesData.main.estimatesNumber}}</div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="estimates-gray-label"><translate>estimates.labels.ESTIMATES_TYPE</translate></div>
+                        <div class="estimates-type estimates-value">{{estimatesData.main.estimatesType.selectedValue}}</div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="estimates-gray-label"><translate>estimates.labels.CREATION_DATE</translate></div>
+                        <div class="estimates-created-date estimates-value">{{estimatesData.createDate}}</div>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="estimates-bold-label"><translate>estimates.labels.CENTER</translate></label>
+                    <select class="estimates-center form-control"
+                            ng-options="opt as opt.description for opt in estimatesData.main.center.list track by opt.key"
+                            ng-model="estimatesData.main.center.selected"
+                            ng-change="enableSave();"
+                            ng-disabled="disable">
+                    </select>
+
+                </div>
+
+                <div>
+                    <label class="estimates-bold-label"><translate>estimates.labels.REPRESENTATIVE</translate></label>
+                    <select class="estimates-representative form-control"
+                            ng-options="opt as opt.description for opt in estimatesData.main.representative.list track by opt.key"
+                            ng-model="estimatesData.main.representative.selected"
+                            ng-change="enableSave();"
+                            ng-disabled="disable">
+                    </select>
+
+                </div>
+
+                <div class="estimates-notes-container">
+                    <label class="estimates-bold-label"><translate>estimates.labels.USER_NOTES</translate></label>
+                    <textarea-directive ng-model="estimatesData.userNotes"
+                        max-length="2000"
+                        auto-scroll="true"
+                        ng-change="enableSave();"
+                        disabled="disable"
+                        rows="6"
+                        placeholder="Enter a comment"
+                        i18n-filter="i18n-number">
+                    </textarea-directive>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 text-left">
+            <div class="padding-double panel common-height">
+                <div class="estimates-gray-label"><translate>estimates.labels.EXPIRATION_DATE</translate></div>
+                <div>
+                    <div class="date-picker-position-fix date-picker-container form-group input-group">
+                        <input type="text"
+                               class="form-control delivery-date estimates-expires-on"
+                               datepicker-popup="{{estimates}}"
+                               ng-model="estimatesData.endDate"
+                               is-open="estimatesView.isOpen"
+                               min-date="estimatesView.minDate"
+                               max-date="estimatesView.maxDate"
+                               datepicker-options="estimatesView.dateOptions"
+                               show-button-bar="false"
+                               date-disabled="estimatesView.disabled(date, mode)"
+                               ng-required="true"
+                               ng-change="enableSave();"
+                               close-text="Close"
+                               ng-click="estimatesView.datePickerOpen($event, disable)"
+                               onkeydown="return false"/>
+                        <span class="calendar" ng-click="estimatesView.datePickerOpen($event, disable)"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 text-left">
+            <div class="padding-double panel common-height">
+                <div class="estimates-gray-label"><translate>estimates.labels.ESTIMATES_STATUS</translate></div>
+                <div ng-switch="completed">
+                    <div ng-switch-when="false">
+                        <select class="form-control"
+                                ng-options="opt.description as opt.description for opt in estimatesData.main.status.list | filter: { description: '!Completed' }"
+                                ng-model="estimatesData.main.status.selectedValue"
+                                ng-change="enableSave();"
+                                ng-disabled="disable">
+                        </select>
+                    </div>
+                    <div ng-switch-when="true">
+                        <label class="estimates-completed"><translate>estimates.labels.ESTIMATES_COMPLETED</translate></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
