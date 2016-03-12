@@ -9,6 +9,7 @@ This code demonstrates:
 * Services
 * Directives
 * Routing (using [angular-ui-router](https://github.com/angular-ui/ui-router))
+* Unit Tests written in [Mocha](https://mochajs.org/), [Sinon](http://sinonjs.org/), and [Chai](http://chaijs.com/)
 * Internationalization
 * Service Mocking with [API Blueprint](https://apiblueprint.org/)
 * [LESS](http://lesscss.org/) files for CSS
