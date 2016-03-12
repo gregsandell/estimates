@@ -10,7 +10,7 @@
       url: '/:estimatesId/main',
       views: {
         'mainView@root': {
-          templateUrl: 'src/estimates/main/quote-details.html',
+          templateUrl: 'src/estimates/main/estimates.html',
           controller: 'EstimatesCtrl',
           controllerAs: 'estimatesCtrl'
         }
