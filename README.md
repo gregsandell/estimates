@@ -13,6 +13,7 @@ This code demonstrates:
 * Internationalization
 * Service Mocking with [API Blueprint](https://apiblueprint.org/)
 * [LESS](http://lesscss.org/) files for CSS
+* Bootstrap
 
 The code depends on certain libraries and project configuration that has not been included in this repository.
 
